@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Dancing+Script&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
 <body>
     <main>
-        <div class="fechado">
+        <div class="inicial">
             <h1>Qual é a sua sorte de hoje?</h1>
             <p>Abra o biscoito e descubra!</p>
-            <img src="assets/fortune-cookie.svg" alt="Biscoito da fortuna">
+            <img id="biscoito" src="assets/fortune-cookie.svg" alt="Biscoito da fortuna">
         </div>
-        <div class="aberto hidden">
-            <h1>Aqui está a sua sorte de hoje</h1>
-            <p>“A vida trará coisas boas se tiveres paciência.”</p>
+        <div class="final hidden">
+            <h1>Aqui está a sua sorte de hoje:</h1>
+            <p class="frase">“A vida trará coisas boas se tiveres paciência.”</p>
             <img src="assets/opened-cookie.svg" alt="Biscoito da fortuna aberto">
             <button>Abrir outro biscoito</button>
         </div>
