@@ -1,4 +1,5 @@
 abrirBiscoito = document.querySelector('#biscoito').addEventListener('click', abrirBiscoito)
+novamente = document.querySelector('#novamente').addEventListener('click', mudarTela)
 
 telaInicial = document.querySelector('.inicial')
 telaFinal = document.querySelector('.final')

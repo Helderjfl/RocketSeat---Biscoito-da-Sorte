@@ -10,6 +10,8 @@ html{
 
 body{
     background: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+    background-size: 300% 300%;
+	animation: gradient 10s ease infinite;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -48,7 +50,7 @@ main{
     
 }
 
-main div{
+main > div{
     background: #fff;   
     min-height: 424px;
     display: flex;
@@ -70,20 +72,67 @@ main .final img{
 }
 
 .final button{
-    width: 264px;
-    height: 50px;
-    background: #BB00FF;
+    background: #FF9500;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.4rem;
     color: #fff;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: DM Sans;
+    font-weight: 700;
     margin: 0 auto;
     margin-top: 20px;
     cursor: pointer;
     transition: 0.3s;
+    padding: 1.6rem;
+}
+
+.final img{
+    padding: 4.2rem 0px;
 }
 
 .hidden{
     display: none;
+}
+
+#biscoito:hover {
+    animation: shake infinite 0.5s;
+}
+
+.final:not(hidden) .frase{
+    animation: revelar 1.0s linear 0.1s 1 backwards;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes revelar {
+    0%{
+        transform: translateY(150px) scale(0.1);
+    }
+    100%{
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
